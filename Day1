@@ -1,0 +1,26 @@
+fichier = open("adventcode1.txt", "r")
+
+calcul = []
+
+for f in fichier :
+  """for i in f:
+    if i in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+      #print(type(i), i)
+        ni = int(i)
+        #print(type(ni), ni)"""
+  #print(f)
+  bonne_ligne = []
+  for n in f :
+    if n.isdigit():
+    #if n in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']: 
+      bonne_ligne.append(n)
+  #print(bonne_ligne)
+  #print(bonne_ligne[0],bonne_ligne[-1])
+  ultime = bonne_ligne[0] + bonne_ligne[-1]
+  new_ultime = int(ultime)
+  calcul.append(new_ultime)
+  #print(new_ultime)
+
+#print(calcul)
+
+print(sum(calcul))
